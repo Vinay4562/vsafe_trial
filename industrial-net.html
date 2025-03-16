@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover V_Safe's premium industrial safety nets in Hyderabad, Telangana. Ensure worker safety and protect equipment with our durable, heavy-duty nets for construction, factories, and warehouses.">
+    <meta name="keywords" content="industrial nets, safety nets, construction nets, debris nets, cargo nets, Hyderabad, Telangana">
+    <meta name="author" content="V_Safe">
+    <title>Industrial Nets | V_Safe</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="our-products.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    color: #333;
+}
+
+/* Header Styling */
+.header {
+    position: sticky;
+    top: 0;
+    background: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.navbar {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-menu li a {
+    color: #333;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 10px 15px;
+    transition: color 0.3s ease;
+}
+
+.nav-menu li a:hover {
+    color: #0056D2;
+}
+
+.nav-menu li a.active {
+    color: #0056D2;
+    font-weight: 600;
+    border-bottom: 2px solid #0056D2;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+    width: 30px;
+    height: 25px;
+    position: relative;
+}
+
+.hamburger .bar {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background: #333;
+    position: absolute;
+    transition: all 0.3s ease;
+}
+
+.hamburger .bar:nth-child(1) { top: 0; }
+.hamburger .bar:nth-child(2) { top: 50%; transform: translateY(-50%); }
+.hamburger .bar:nth-child(3) { bottom: 0; }
+
+.hamburger.active .bar:nth-child(1) {
+    transform: translateY(11px) rotate(45deg);
+}
+.hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+}
+.hamburger.active .bar:nth-child(3) {
+    transform: translateY(-11px) rotate(-45deg);
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+.social-icons a {
+    font-size: 20px;
+    transition: 0.3s;
+}
+.social-icons a:hover {
+    transform: scale(1.2);
+}
+.social-icons a .fa-facebook { color: #1877f2; }
+.social-icons a:hover .fa-facebook { color: #0e5a8a; }
+
+.social-icons a .fa-twitter { color: #1da1f2; }
+.social-icons a:hover .fa-twitter { color: #0c85d0; }
+
+.social-icons a .fa-instagram { color: #e4405f; }
+.social-icons a:hover .fa-instagram { color: #c13584; }
+
+.social-icons a .fa-linkedin { color: #0077b5; }
+.social-icons a:hover .fa-linkedin { color: #005582; }
+
+.social-icons a .fa-youtube { color: #ff0000; }
+.social-icons a:hover .fa-youtube { color: #cc0000; }
+
+.social-icons a .fa-pinterest { color: #bd081c; }
+.social-icons a:hover .fa-pinterest { color: #8c0614; }
+
+.social-icons a .fa-phone { color: #34b7f1; }
+.social-icons a:hover .fa-phone { color: #1a94cc; }
+
+.social-icons a .fa-whatsapp { color: #25d366; }
+.social-icons a:hover .fa-whatsapp { color: #1a9f50; }
+
+/* Back Button Styles */
+.back-button-container {
+    width: 95%;
+    margin: 20px auto 5px auto;
+    text-align: left;
+}
+
+.back-button {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 20px;
+    background: #0056D2;
+    border-radius: 5px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.back-button i {
+    margin-right: 10px;
+    font-size: 18px;
+}
+
+.back-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: all 0.5s ease;
+}
+
+.back-button:hover::before {
+    left: 100%;
+}
+
+.back-button:hover {
+    background: #003BB3;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Products Gallery Section */
+.products-gallery {
+    width: 95%;
+    margin: 10px auto 50px auto;
+    padding: 0 0;
+    background: #f9f9f9;
+}
+
+.content-section {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.content-section h2 {
+    font-size: 36px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: left;
+}
+
+.content-section h3 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #333;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.content-section p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+.content-section p a {
+    color: #0056D2;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.content-section p a:hover {
+    color: #003BB3;
+}
+
+.content-section ul, .content-section ol {
+    margin-left: 40px;
+    margin-bottom: 15px;
+}
+
+.content-section ul li, .content-section ol li {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 10px;
+    text-align: justify;
+}
+
+.content-section ul ul {
+    margin-left: 20px;
+}
+
+.content-section ul li .checkmark, .content-section ol li .number {
+    color: #14ff72cb;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+/* Table Styles for Comparison */
+.content-section table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 15px;
+}
+
+.content-section th, .content-section td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+    font-size: 16px;
+    color: #666;
+}
+
+.content-section th {
+    background-color: #f2f2f2;
+    font-weight: 600;
+    color: #333;
+}
+
+/* WhatsApp Floating ButtonWAN */
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background-color: #25d366;
+    border-radius: 50%;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    text-decoration: none;
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.whatsapp-float i {
+    font-size: 40px;
+    color: white;
+}
+
+.whatsapp-float:hover {
+    background-color: #1ebc58;
+    transform: scale(1.1);
+}
+
+.whatsapp-float::after {
+    content: "Chat on WhatsApp";
+    position: absolute;
+    bottom: 70px;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    white-space: nowrap;
+}
+
+.whatsapp-float:hover::after {
+    opacity: 1;
+}
+
+/* Footer Section */
+.footer {
+    width: 100%;
+    background: #333;
+    color: #fff;
+    padding: 40px 0;
+    margin-top: 50px;
+}
+
+.footer-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.footer-column h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.footer-column p, .footer-column ul {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-column ul li a:hover {
+    color: #00C4B4;
+}
+
+.footer-column p i {
+    margin-right: 10px;
+}
+
+.footer-column .social-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-btn {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #fff;
+    color: #333;
+    font-size: 18px;
+    text-decoration: none;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.social-btn:hover {
+    transform: scale(1.2);
+}
+
+.social-btn i.fa-facebook-f { background: #1877f2; color: #fff; }
+.social-btn i.fa-instagram { background: #e4405f; color: #fff; }
+.social-btn i.fa-youtube { background: #ff0000; color: #fff; }
+.social-btn i.fa-pinterest-p { background: #bd081c; color: #fff; }
+
+.footer-bottom {
+    text-align: center;
+    padding: 20px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: 20px;
+}
+
+.footer-bottom p {
+    font-size: 14px;
+    margin: 0;
+}
+
+/* Scroll Animation */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.animate-on-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 999px) {
+    .hamburger {
+        display: block;
+    }
+    .navbar {
+        justify-content: flex-end;
+    }
+    .hamburger {
+        margin-left: auto;
+    }
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: #fff;
+        padding: 20px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+    .nav-menu.active {
+        display: flex;
+    }
+    .social-icons {
+        display: none;
+    }
+    .content-section h2 {
+        font-size: 28px;
+    }
+    .content-section h3 {
+        font-size: 20px;
+    }
+    .content-section p, .content-section ul li, .content-section ol li, .content-section th, .content-section td {
+        font-size: 14px;
+    }
+    .back-button {
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+    .back-button i {
+        font-size: 16px;
+    }
+    .footer-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 690px) {
+    .header {
+        padding: 15px;
+    }
+    .content-section h2 {
+        font-size: 24px;
+    }
+    .content-section h3 {
+        font-size: 18px;
+    }
+    .content-section p, .content-section ul li, .content-section ol li, .content-section th, .content-section td {
+        font-size: 12px;
+    }
+    .content-section ul, .content-section ol {
+        margin-left: 20px;
+    }
+    .back-button {
+        padding: 6px 10px;
+        font-size: 12px;
+    }
+    .back-button i {
+        font-size: 14px;
+    }
+    .footer-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    .footer-column .social-buttons {
+        justify-content: center;
+    }
+}
+    </style>
+</head>
+<body>
+    <!-- Header with Enhanced Hamburger Menu -->
+    <header class="header">
+        <div class="logo">V_Safe</div>
+        <nav class="navbar">
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="our-products.html" class="active">Our Products</a></li>
+                <li><a href="contact-us.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/people/VSAFE-The-Experts-In-Safety-Projects/61559489837923/?mibextid=ZbWKwL"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com/vsafeprojects/"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.youtube.com/@vsafeprojects"><i class="fab fa-youtube"></i></a>
+            <a href="https://in.pinterest.com/vsafeprojects/"><i class="fab fa-pinterest"></i></a>
+            <a href="tel:+1234567890"><i class="fas fa-phone"></i></a>
+            <a href="https://wa.me/1234567890"><i class="fab fa-whatsapp"></i></a>
+        </div>
+    </header>
+
+    <!-- Back Button -->
+    <div class="back-button-container">
+        <a href="our-products.html" class="back-button">
+            <i class="fas fa-arrow-left"></i> Back to Products
+        </a>
+    </div>
+
+    <!-- Main Content Section - Text Book Layout -->
+    <section class="products-gallery">
+        <div class="content-section">
+            <h2>Industrial Nets – High-Strength Safety Nets for Industrial Protection</h2>
+
+            <h3>Ensure Maximum Safety & Protection with V-Safe Industrial Nets</h3>
+            <p>Industrial workplaces such as construction sites, factories, warehouses, and manufacturing units require high-quality safety nets to prevent accidents, ensure worker safety, and secure materials.</p>
+            <p>At V-Safe, we provide premium industrial safety nets designed to protect workers, equipment, and structures from unexpected falls, debris, and harsh environmental conditions. Our nets are made from heavy-duty, durable, and weather-resistant materials to meet the highest safety standards.</p>
+
+            <h3>What are Industrial Safety Nets?</h3>
+            <p>Industrial safety nets are strong protective nets used in construction, factories, and industrial areas to prevent falls, accidents, and damage from falling debris. These nets act as a protective barrier to ensure a safe and accident-free environment for workers.</p>
+            <p>With V-Safe Industrial Nets, you can reduce workplace hazards and ensure compliance with industrial safety regulations.</p>
+
+            <h3>Benefits of Installing Industrial Nets</h3>
+            <ul>
+                <li><strong>Worker Safety & Fall Protection:</strong>
+                    <ul>
+                        <li>Prevents fall-related accidents at construction sites and high-rise buildings.</li>
+                        <li>Reduces the risk of injuries and fatalities.</li>
+                    </ul>
+                </li>
+                <li><strong>Protection from Falling Debris:</strong>
+                    <ul>
+                        <li>Ensures safety by stopping debris, tools, and materials from falling on workers below.</li>
+                        <li>Keeps the site clean and organized.</li>
+                    </ul>
+                </li>
+                <li><strong>High-Strength & Durable Material:</strong>
+                    <ul>
+                        <li>Made from UV-resistant, heavy-duty nylon, polyethylene, and polypropylene.</li>
+                        <li>Weatherproof, tear-resistant, and flame-retardant for maximum durability.</li>
+                    </ul>
+                </li>
+                <li><strong>Compliance with Safety Regulations:</strong>
+                    <ul>
+                        <li>Meets industrial safety standards and helps businesses comply with workplace safety laws.</li>
+                        <li>Ensures a secure work environment, reducing liability risks.</li>
+                    </ul>
+                </li>
+                <li><strong>Cost-Effective Safety Solution:</strong>
+                    <ul>
+                        <li>Prevents costly accidents, legal issues, and equipment damage.</li>
+                        <li>One-time investment with long-term protection.</li>
+                    </ul>
+                </li>
+                <li><strong>Versatile & Multi-Purpose Use:</strong>
+                    <ul>
+                        <li>Suitable for construction sites, warehouses, shipyards, and manufacturing units.</li>
+                        <li>Can be used as temporary or permanent safety barriers.</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <h3>Types of Industrial Nets Available at V-Safe</h3>
+            <ul>
+                <li><span class="checkmark">🔹</span> <strong>Construction Safety Nets</strong> – Protects workers from falling at high-rise sites.</li>
+                <li><span class="checkmark">🔹</span> <strong>Debris Nets</strong> – Prevents tools, materials, and debris from falling.</li>
+                <li><span class="checkmark">🔹</span> <strong>Cargo Nets</strong> – Used for securing and transporting heavy goods.</li>
+                <li><span class="checkmark">🔹</span> <strong>Warehouse Safety Nets</strong> – Prevents accidents in storage areas.</li>
+                <li><span class="checkmark">🔹</span> <strong>Heavy-Duty Industrial Fencing Nets</strong> – Secures hazardous industrial zones.</li>
+            </ul>
+
+            <h3>Where Can Industrial Nets Be Used?</h3>
+            <ul>
+                <li><span class="checkmark">✔</span> <strong>Construction Sites</strong> – Prevents worker falls and debris accidents.</li>
+                <li><span class="checkmark">✔</span> <strong>Factories & Warehouses</strong> – Provides protection in work and storage areas.</li>
+                <li><span class="checkmark">✔</span> <strong>Shipping & Cargo Handling</strong> – Secures heavy loads and prevents goods from falling.</li>
+                <li><span class="checkmark">✔</span> <strong>Bridges & High-Rise Buildings</strong> – Essential for workers at high elevations.</li>
+                <li><span class="checkmark">✔</span> <strong>Power Plants & Industrial Facilities</strong> – Protects equipment and employees.</li>
+            </ul>
+
+            <h3>Why Choose V-Safe for Industrial Safety Nets?</h3>
+            <ul>
+                <li><span class="checkmark">✅</span> <strong>High-Quality, Heavy-Duty Materials</strong> – Tear-resistant and weatherproof.</li>
+                <li><span class="checkmark">✅</span> <strong>Customized Sizes & Designs</strong> – Fits all industrial needs.</li>
+                <li><span class="checkmark">✅</span> <strong>Expert Installation</strong> – Professional setup for maximum safety.</li>
+                <li><span class="checkmark">✅</span> <strong>Compliance with Safety Standards</strong> – Approved for industrial use.</li>
+                <li><span class="checkmark">✅</span> <strong>Long-Lasting & Cost-Effective</strong> – One-time investment for long-term security.</li>
+                <li><span class="checkmark">✅</span> <strong>Trusted by Leading Industries</strong> – Used by top construction and manufacturing companies.</li>
+            </ul>
+
+            <h3>How to Get Your Industrial Net Installed?</h3>
+            <ol>
+                <li><span class="number">📌</span> <strong>Contact us with your requirements.</strong></li>
+                <li><span class="number">📌</span> <strong>Get a free consultation and site inspection.</strong></li>
+                <li><span class="number">📌</span> <strong>Choose the right safety net type for your industry.</strong></li>
+                <li><span class="number">📌</span> <strong>Our professionals handle the quick & secure installation.</strong></li>
+                <li><span class="number">📌</span> <strong>Ensure maximum safety at your workplace!</strong></li>
+            </ol>
+
+            <h3>Contact Us Today!</h3>
+            <p>📞 <strong>Call Us:</strong> [Your Contact Number]</p>
+            <p>📩 <strong>Email:</strong> [Your Email Address]</p>
+            <p>🌐 <strong>Website:</strong> [Your Website URL]</p>
+            <p><strong>Protect your workforce and secure your site with V-Safe Industrial Nets!</strong></p>
+            <p><strong>Safety First, Work Without Worry! 🏗️🔧✅</strong></p>
+        </div>
+    </section>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/919876543210" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>V_Safe</h3>
+                <p>Leading provider of safety solutions in Telangana, Hyderabad, Andhra Pradesh, and beyond.</p>
+            </div>
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="our-products.html">Our Products</a></li>
+                    <li><a href="contact-us.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Contact Us</h3>
+                <p><i class="fas fa-map-marker-alt"></i> 123 Safety Street, Hyderabad, Telangana, India - 500001</p>
+                <p><i class="fas fa-phone"></i> <a href="tel:+919876543210">+91 98765 43210</a></p>
+                <p><i class="fab fa-whatsapp"></i> <a href="https://wa.me/919876543210">+91 98765 43210</a></p>
+            </div>
+            <div class="footer-column">
+                <h3>Follow Us</h3>
+                <div class="social-buttons">
+                    <a href="https://www.facebook.com/people/VSAFE-The-Experts-In-Safety-Projects/61559489837923/?mibextid=ZbWKwL" class="social-btn"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/vsafeprojects/" class="social-btn"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.youtube.com/@vsafeprojects" class="social-btn"><i class="fab fa-youtube"></i></a>
+                    <a href="https://in.pinterest.com/vsafeprojects/" class="social-btn"><i class="fab fa-pinterest-p"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 VSAFE. Powered by VSAFE | Vin-Tech Solutions PVT LTD</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Hamburger Menu -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const hamburger = document.querySelector('.hamburger');
+            const navMenu = document.querySelector('.nav-menu');
+
+            hamburger.addEventListener('click', function () {
+                hamburger.classList.toggle('active');
+                navMenu.classList.toggle('active');
+            });
+
+            // Handle navbar link clicks
+            document.querySelectorAll('.nav-menu a').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    const href = this.getAttribute('href');
+                    if (href.startsWith('#')) {
+                        e.preventDefault();
+                        const targetId = href.substring(1);
+                        const targetElement = document.getElementById(targetId);
+                        if (targetElement) {
+                            targetElement.scrollIntoView({ behavior: 'smooth' });
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

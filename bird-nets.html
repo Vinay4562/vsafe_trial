@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover V_Safe's premium bird nets for effective bird control in Hyderabad, Telangana. Protect your home, business, and industrial spaces with our durable, eco-friendly bird netting solutions.">
+    <meta name="keywords" content="bird nets, bird control, safety nets, pigeon nets, Hyderabad, Telangana">
+    <meta name="author" content="V_Safe">
+    <title>Bird Nets | V_Safe</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    color: #333;
+}
+
+/* Header Styling */
+.header {
+    position: sticky;
+    top: 0;
+    background: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.navbar {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-menu li a {
+    color: #333;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 10px 15px;
+    transition: color 0.3s ease;
+}
+
+.nav-menu li a:hover {
+    color: #0056D2;
+}
+
+.nav-menu li a.active {
+    color: #0056D2;
+    font-weight: 600;
+    border-bottom: 2px solid #0056D2;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+    width: 30px;
+    height: 25px;
+    position: relative;
+}
+
+.hamburger .bar {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background: #333;
+    position: absolute;
+    transition: all 0.3s ease;
+}
+
+.hamburger .bar:nth-child(1) { top: 0; }
+.hamburger .bar:nth-child(2) { top: 50%; transform: translateY(-50%); }
+.hamburger .bar:nth-child(3) { bottom: 0; }
+
+.hamburger.active .bar:nth-child(1) {
+    transform: translateY(11px) rotate(45deg);
+}
+.hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+}
+.hamburger.active .bar:nth-child(3) {
+    transform: translateY(-11px) rotate(-45deg);
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+.social-icons a {
+    font-size: 20px;
+    transition: 0.3s;
+}
+.social-icons a:hover {
+    transform: scale(1.2);
+}
+.social-icons a .fa-facebook { color: #1877f2; }
+.social-icons a:hover .fa-facebook { color: #0e5a8a; }
+
+.social-icons a .fa-twitter { color: #1da1f2; }
+.social-icons a:hover .fa-twitter { color: #0c85d0; }
+
+.social-icons a .fa-instagram { color: #e4405f; }
+.social-icons a:hover .fa-instagram { color: #c13584; }
+
+.social-icons a .fa-linkedin { color: #0077b5; }
+.social-icons a:hover .fa-linkedin { color: #005582; }
+
+.social-icons a .fa-youtube { color: #ff0000; }
+.social-icons a:hover .fa-youtube { color: #cc0000; }
+
+.social-icons a .fa-pinterest { color: #bd081c; }
+.social-icons a:hover .fa-pinterest { color: #8c0614; }
+
+.social-icons a .fa-phone { color: #34b7f1; }
+.social-icons a:hover .fa-phone { color: #1a94cc; }
+
+.social-icons a .fa-whatsapp { color: #25d366; }
+.social-icons a:hover .fa-whatsapp { color: #1a9f50; }
+
+/* Back Button Styles */
+.back-button-container {
+    width: 95%;
+    margin: 20px auto 5px auto;
+    text-align: left;
+}
+
+.back-button {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 20px;
+    background: #0056D2;
+    border-radius: 5px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.back-button i {
+    margin-right: 10px;
+    font-size: 18px;
+}
+
+.back-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: all 0.5s ease;
+}
+
+.back-button:hover::before {
+    left: 100%;
+}
+
+.back-button:hover {
+    background: #003BB3;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Products Gallery Section */
+.products-gallery {
+    width: 95%;
+    margin: 10px auto 50px auto;
+    padding: 0 0;
+    background: #f9f9f9;
+}
+
+.content-section {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.content-section h2 {
+    font-size: 36px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: left;
+}
+
+.content-section h3 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #333;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.content-section p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+.content-section p a {
+    color: #0056D2;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.content-section p a:hover {
+    color: #003BB3;
+}
+
+.content-section ul, .content-section ol {
+    margin-left: 40px;
+    margin-bottom: 15px;
+}
+
+.content-section ul li, .content-section ol li {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 10px;
+    text-align: justify;
+}
+
+.content-section ul li .checkmark, .content-section ol li .number {
+    color: #14ff72cb;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+/* WhatsApp Floating Button */
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background-color: #25d366;
+    border-radius: 50%;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    text-decoration: none;
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.whatsapp-float i {
+    font-size: 40px;
+    color: white;
+}
+
+.whatsapp-float:hover {
+    background-color: #1ebc58;
+    transform: scale(1.1);
+}
+
+.whatsapp-float::after {
+    content: "Chat on WhatsApp";
+    position: absolute;
+    bottom: 70px;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    white-space: nowrap;
+}
+
+.whatsapp-float:hover::after {
+    opacity: 1;
+}
+
+/* Footer Section */
+.footer {
+    width: 100%;
+    background: #333;
+    color: #fff;
+    padding: 40px 0;
+    margin-top: 50px;
+}
+
+.footer-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.footer-column h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.footer-column p, .footer-column ul {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-column ul li a:hover {
+    color: #00C4B4;
+}
+
+.footer-column p i {
+    margin-right: 10px;
+}
+
+.footer-column .social-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-btn {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #fff;
+    color: #333;
+    font-size: 18px;
+    text-decoration: none;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.social-btn:hover {
+    transform: scale(1.2);
+}
+
+.social-btn i.fa-facebook-f { background: #1877f2; color: #fff; }
+.social-btn i.fa-instagram { background: #e4405f; color: #fff; }
+.social-btn i.fa-youtube { background: #ff0000; color: #fff; }
+.social-btn i.fa-pinterest-p { background: #bd081c; color: #fff; }
+
+.footer-bottom {
+    text-align: center;
+    padding: 20px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: 20px;
+}
+
+.footer-bottom p {
+    font-size: 14px;
+    margin: 0;
+}
+
+/* Scroll Animation */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.animate-on-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 999px) {
+    .hamburger {
+        display: block;
+    }
+    .navbar {
+        justify-content: flex-end;
+    }
+    .hamburger {
+        margin-left: auto;
+    }
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: #fff;
+        padding: 20px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+    .nav-menu.active {
+        display: flex;
+    }
+    .social-icons {
+        display: none;
+    }
+    .content-section h2 {
+        font-size: 28px;
+    }
+    .content-section h3 {
+        font-size: 20px;
+    }
+    .content-section p, .content-section ul li, .content-section ol li {
+        font-size: 14px;
+    }
+    .back-button {
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+    .back-button i {
+        font-size: 16px;
+    }
+    .footer-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 690px) {
+    .header {
+        padding: 15px;
+    }
+    .content-section h2 {
+        font-size: 24px;
+    }
+    .content-section h3 {
+        font-size: 18px;
+    }
+    .content-section p, .content-section ul li, .content-section ol li {
+        font-size: 12px;
+    }
+    .content-section ul, .content-section ol {
+        margin-left: 20px;
+    }
+    .back-button {
+        padding: 6px 10px;
+        font-size: 12px;
+    }
+    .back-button i {
+        font-size: 14px;
+    }
+    .footer-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    .footer-column .social-buttons {
+        justify-content: center;
+    }
+}
+    </style>
+</head>
+<body>
+    <!-- Header with Enhanced Hamburger Menu -->
+    <header class="header">
+        <div class="logo">V_Safe</div>
+        <nav class="navbar">
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="our-products.html" class="active">Our Products</a></li> <!-- Active class added -->
+                <li><a href="contact-us.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/people/VSAFE-The-Experts-In-Safety-Projects/61559489837923/?mibextid=ZbWKwL"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com/vsafeprojects/"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.youtube.com/@vsafeprojects"><i class="fab fa-youtube"></i></a>
+            <a href="https://in.pinterest.com/vsafeprojects/"><i class="fab fa-pinterest"></i></a>
+            <a href="tel:+1234567890"><i class="fas fa-phone"></i></a>
+            <a href="https://wa.me/1234567890"><i class="fab fa-whatsapp"></i></a>
+        </div>
+    </header>
+
+    <!-- Back Button -->
+    <div class="back-button-container">
+        <a href="our-products.html" class="back-button">
+            <i class="fas fa-arrow-left"></i> Back to Products
+        </a>
+    </div>
+
+    <!-- Main Content Section - Text Book Layout -->
+    <section class="products-gallery animate-on-scroll">
+        <div class="content-section">
+            <h2>Bird Nets – The Ultimate Solution for Bird Control</h2>
+
+            <h3>Protect Your Home & Business from Unwanted Birds</h3>
+            <p>Birds can be beautiful creatures, but they can also become a nuisance when they invade your space. They often create messes, damage property, and pose health risks. At V-Safe, we provide high-quality Bird Nets that act as a protective barrier against birds while ensuring your environment remains clean, safe, and hygienic.</p>
+
+            <h3>What Are Bird Nets?</h3>
+            <p>Bird nets are specially designed, durable, and weather-resistant nets that prevent birds from entering specific areas such as balconies, windows, terraces, warehouses, and factories. These nets are harmless to birds but effectively stop them from roosting or nesting in unwanted places.</p>
+            <p>Our V-Safe Bird Nets are made from high-quality nylon and HDPE material that ensures long-lasting protection while maintaining an aesthetic look.</p>
+
+            <h3>Why Do You Need Bird Nets?</h3>
+            <ul>
+                <li><strong>Prevents Bird Droppings & Mess:</strong> Bird droppings can create an unhygienic environment, leading to health issues and stains on your property. Bird nets act as a shield to keep your space clean.</li>
+                <li><strong>Avoids Damage to Property:</strong> Pigeons and other birds often damage balconies, AC units, pipes, and electrical wiring by nesting in them. Bird nets prevent this without harming the birds.</li>
+                <li><strong>Reduces Health Hazards:</strong> Bird droppings contain harmful bacteria and fungi that can cause respiratory issues, allergies, and infections. Installing a bird net helps maintain a healthy environment for your family or employees.</li>
+                <li><strong>Protects Agricultural & Industrial Areas:</strong> For factories, warehouses, and farms, bird nets help protect products from contamination and damage caused by bird activity.</li>
+                <li><strong>Safe & Non-Harmful to Birds:</strong> Unlike other bird control methods like spikes, chemicals, or electric deterrents, bird nets are completely safe and humane. They simply prevent birds from entering restricted areas without harming them.</li>
+            </ul>
+
+            <h3>Where Can Bird Nets Be Used?</h3>
+            <ul>
+                <li><span class="checkmark">✔</span> <strong>Balconies & Windows</strong> – Keep pigeons and other birds away from your home.</li>
+                <li><span class="checkmark">✔</span> <strong>Terraces & Open Areas</strong> – Protect rooftops and avoid bird infestations.</li>
+                <li><span class="checkmark">✔</span> <strong>Factories & Warehouses</strong> – Prevent birds from damaging goods and machinery.</li>
+                <li><span class="checkmark">✔</span> <strong>Restaurants & Hotels</strong> – Maintain hygiene standards and prevent bird-related disturbances.</li>
+                <li><span class="checkmark">✔</span> <strong>Hospitals & Schools</strong> – Ensure a safe, clean, and bird-free environment.</li>
+                <li><span class="checkmark">✔</span> <strong>Farms & Gardens</strong> – Protect crops and plants from birds.</li>
+            </ul>
+
+            <h3>Why Choose V-Safe for Bird Nets?</h3>
+            <p>At V-Safe, we specialize in providing high-quality, durable, and affordable bird nets for residential, commercial, and industrial purposes. Here’s why we are the best choice:</p>
+            <ul>
+                <li><span class="checkmark">✅</span> <strong>Premium Quality Nets</strong> – Our nets are made of high-density polyethylene (HDPE) and nylon, ensuring long-lasting durability.</li>
+                <li><span class="checkmark">✅</span> <strong>UV Resistant & Weatherproof</strong> – Our nets are designed to withstand sunlight, rain, and dust without deteriorating.</li>
+                <li><span class="checkmark">✅</span> <strong>Customized Solutions</strong> – We offer customized netting solutions tailored to your requirements.</li>
+                <li><span class="checkmark">✅</span> <strong>Expert Installation</strong> – Our team of professionals ensures a hassle-free installation with zero damage to your property.</li>
+                <li><span class="checkmark">✅</span> <strong>Affordable Pricing</strong> – Get the best quality at the most competitive prices in the market.</li>
+                <li><span class="checkmark">✅</span> <strong>100% Bird-Friendly & Eco-Friendly</strong> – Our nets do not harm birds; they simply restrict their access.</li>
+                <li><span class="checkmark">✅</span> <strong>Minimal Maintenance Required</strong> – Our nets require little to no maintenance, saving you both time and money.</li>
+                <li><span class="checkmark">✅</span> <strong>Trusted & Reliable</strong> – We have successfully installed thousands of bird nets across homes, offices, and industries, earning the trust of our customers.</li>
+            </ul>
+
+            <h3>How to Get Your Bird Net Installed?</h3>
+            <p>Getting V-Safe Bird Nets installed is quick and easy!</p>
+            <ol>
+                <li><span class="number">1️⃣</span> <strong>Call Us or Send an Inquiry</strong> – Reach out to us, and our team will understand your requirements.</li>
+                <li><span class="number">2️⃣</span> <strong>Get a Free Consultation</strong> – Our experts will suggest the best solution based on your space.</li>
+                <li><span class="number">3️⃣</span> <strong>Installation by Professionals</strong> – Our trained staff will install the nets quickly and efficiently.</li>
+                <li><span class="number">4️⃣</span> <strong>Enjoy a Bird-Free Space!</strong> – Say goodbye to bird problems and enjoy a clean, safe environment.</li>
+            </ol>
+
+            <h3>Contact Us Today!</h3>
+            <p>📞 <strong>Call Us:</strong> <a href="tel:+919876543210">+91 98765 43210</a></p>
+            <p>📩 <strong>Email:</strong> [Your Email Address]</p>
+            <p>🌐 <strong>Website:</strong> <a href="https://www.vsafeprojects.com">www.vsafeprojects.com</a></p>
+            <p><strong>Protect your home, business, and surroundings with V-Safe Bird Nets today! Say NO to bird problems and YES to a cleaner, healthier space.</strong></p>
+        </div>
+    </section>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/919876543210" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>V_Safe</h3>
+                <p>Leading provider of safety solutions in Telangana, Hyderabad, Andhra Pradesh, and beyond.</p>
+            </div>
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="our-products.html">Our Products</a></li>
+                    <li><a href="contact-us.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Contact Us</h3>
+                <p><i class="fas fa-map-marker-alt"></i> 123 Safety Street, Hyderabad, Telangana, India - 500001</p>
+                <p><i class="fas fa-phone"></i> <a href="tel:+919876543210">+91 98765 43210</a></p>
+                <p><i class="fab fa-whatsapp"></i> <a href="https://wa.me/919876543210">+91 98765 43210</a></p>
+            </div>
+            <div class="footer-column">
+                <h3>Follow Us</h3>
+                <div class="social-buttons">
+                    <a href="https://www.facebook.com/people/VSAFE-The-Experts-In-Safety-Projects/61559489837923/?mibextid=ZbWKwL" class="social-btn"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/vsafeprojects/" class="social-btn"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.youtube.com/@vsafeprojects" class="social-btn"><i class="fab fa-youtube"></i></a>
+                    <a href="https://in.pinterest.com/vsafeprojects/" class="social-btn"><i class="fab fa-pinterest-p"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 VSAFE. Powered by VSAFE | Vin-Tech Solutions PVT LTD</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Hamburger Menu and Scroll Animation -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Hamburger Menu
+            const hamburger = document.querySelector('.hamburger');
+            const navMenu = document.querySelector('.nav-menu');
+
+            hamburger.addEventListener('click', function () {
+                hamburger.classList.toggle('active');
+                navMenu.classList.toggle('active');
+            });
+
+            // Handle navbar link clicks
+            document.querySelectorAll('.nav-menu a').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    const href = this.getAttribute('href');
+                    if (href.startsWith('#')) {
+                        e.preventDefault();
+                        const targetId = href.substring(1);
+                        const targetElement = document.getElementById(targetId);
+                        if (targetElement) {
+                            targetElement.scrollIntoView({ behavior: 'smooth' });
+                        }
+                    }
+                });
+            });
+
+            // Scroll Animation
+            const elements = document.querySelectorAll('.animate-on-scroll');
+            function checkVisibility() {
+                const windowHeight = window.innerHeight;
+                elements.forEach(element => {
+                    const elementTop = element.getBoundingClientRect().top;
+                    if (elementTop < windowHeight - 100) {
+                        element.classList.add('visible');
+                    }
+                });
+            }
+            window.addEventListener('scroll', checkVisibility);
+            checkVisibility();
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn about V_Safe, a leading dealer in bird nets, safety nets, sports nets, and Invisible Grilles in Telangana, Hyderabad, Andhra Pradesh, and beyond.">
+    <meta name="keywords" content="bird nets, safety nets, sports nets, Invisible Grilles, mosquito mesh, Hyderabad, Telangana">
+    <meta name="author" content="V_Safe">
+    <title>About Us | V_Safe</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="about.css">
+</head>
+<body>
+    <!-- Header with Sticky Navigation -->
+    <header class="header sticky-header">
+        <div class="header-container">
+            <div class="logo">V_Safe</div>
+            <nav class="navbar">
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html" class="active">About</a></li>
+                    <li><a href="our-products.html">Our Products</a></li>
+                    <li><a href="contact-us.html">Contact</a></li>
+                </ul>
+            </nav>
+            <a href="#contact" class="header-cta">Contact Us</a>
+        </div>
+    </header>
+
+    <!-- Animated About Us Section -->
+    <section class="about-us">
+        <h2 class="section-title">About Us</h2>
+        <div class="about-container">
+            <div class="about-content">
+                <p class="about-text">VSAFE is a leading dealer in bird nets, sports nets, safety nets, and Invisible Grilles Mosquito Mesh, serving Telangana, Hyderabad, Andhra Pradesh, and beyond. With years of experience and a commitment to customer service, we specialize in providing high-quality netting & Invisible Grilles solutions for various safety projects. Our focus on personalized attention ensures customer satisfaction with every order. Trust VSAFE for impeccable netting made from top-quality raw materials, tailored to meet diverse application needs.</p>
+                <a href="contact-us.html" class="contact-btn">Contact Us</a>
+            </div>
+            <div class="about-image">
+                <img src="construction.png" alt="V_Safe About Image">
+            </div>
+        </div>
+    </section>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/919876543210" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>V_Safe</h3>
+                <p>Leading provider of safety solutions in Telangana, Hyderabad, Andhra Pradesh, and beyond.</p>
+            </div>
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="our-products.html">Our Products</a></li>
+                    <li><a href="contact-us.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Contact Us</h3>
+                <p><i class="fas fa-map-marker-alt"></i> 123 Safety Street, Hyderabad, Telangana, India - 500001</p>
+                <p><i class="fas fa-phone"></i> <a href="tel:+919876543210">+91 98765 43210</a></p>
+                <p><i class="fab fa-whatsapp"></i> <a href="https://wa.me/919876543210">+91 98765 43210</a></p>
+            </div>
+            <div class="footer-column">
+                <h3>Follow Us</h3>
+                <div class="social-buttons">
+                    <a href="https://www.facebook.com/people/VSAFE-The-Experts-In-Safety-Projects/61559489837923/?mibextid=ZbWKwL" class="social-btn"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/vsafeprojects/" class="social-btn"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.youtube.com/@vsafeprojects" class="social-btn"><i class="fab fa-youtube"></i></a>
+                    <a href="https://in.pinterest.com/vsafeprojects/" class="social-btn"><i class="fab fa-pinterest-p"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 VSAFE. Powered by VSAFE | Vin-Tech Solutions PVT LTD</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Hamburger Menu -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const hamburger = document.querySelector('.hamburger');
+            const navMenu = document.querySelector('.nav-menu');
+
+            hamburger.addEventListener('click', function () {
+                hamburger.classList.toggle('active');
+                navMenu.classList.toggle('active');
+            });
+
+            // Handle navbar link clicks
+            document.querySelectorAll('.nav-menu a').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    const href = this.getAttribute('href');
+                    if (href.startsWith('#')) {
+                        e.preventDefault();
+                        const targetId = href.substring(1);
+                        const targetElement = document.getElementById(targetId);
+                        if (targetElement) {
+                            targetElement.scrollIntoView({ behavior: 'smooth' });
+                        }
+                        hamburger.classList.remove('active');
+                        navMenu.classList.remove('active');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
