@@ -121,7 +121,7 @@ body {
 .hero-container {
     width: 100%;
     height: 100vh;
-    background: url('hh31.png') no-repeat center center/cover;
+    background: url('hh23.jpeg') no-repeat center center/cover;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -357,6 +357,138 @@ body {
 .category-animate.animate-now {
     animation: slideInFromLeft 0.8s ease-out forwards;
     animation-delay: calc(0.1s * var(--i)); /* Staggered delay based on item index */
+}
+
+/* YouTube Videos Section */
+.youtube-videos {
+    width: 100%; /* Full viewport width */
+    margin: 50px 0; /* Remove auto margin to ensure full width */
+    padding: 40px 20px;
+    text-align: center;
+    background: url('video-bg.jpg') no-repeat center center/cover; /* Replace with your background image */
+    background-attachment: fixed; /* Optional: Parallax effect */
+    position: relative;
+    color: #fff; /* White text for better contrast against background */
+    border-radius: 0; /* Remove border-radius for full-width effect */
+    overflow: hidden;
+}
+
+.youtube-videos::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Dark overlay for readability */
+    z-index: 1;
+}
+
+.videos-container {
+    position: relative;
+    z-index: 2; /* Ensure content is above the overlay */
+    margin-top: 40px;
+    max-width: 1600px; /* Optional: Cap the content width for very large screens */
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 20px; /* Add padding to prevent content from touching edges */
+}
+
+.videos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns for a 3-column, 1-row layout */
+    gap: 40px; /* Increased gap for better spacing */
+}
+
+.video-item {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio for videos */
+    height: 0;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.video-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.video-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.video-item iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.play-button-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+.video-item:hover .play-button-overlay {
+    opacity: 0.8; /* Slightly more visible on hover */
+}
+
+.play-button-overlay i {
+    font-size: 60px; /* Increased size for larger videos */
+    color: #fff;
+    transition: transform 0.3s ease;
+}
+
+.play-button-overlay:hover i {
+    transform: scale(1.2);
+}
+
+.playing .play-button-overlay {
+    display: none; /* Hide overlay when video is playing */
+}
+
+/* Responsive Design for YouTube Videos Section */
+@media screen and (max-width: 999px) {
+    .videos-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on tablets */
+        gap: 30px; /* Slightly reduced gap */
+    }
+
+    .play-button-overlay i {
+        font-size: 50px; /* Adjust play button size */
+    }
+}
+
+@media screen and (max-width: 690px) {
+    .videos-grid {
+        grid-template-columns: 1fr; /* 1 column on mobile */
+        gap: 20px; /* Further reduced gap */
+    }
+
+    .youtube-videos {
+        padding: 20px 10px;
+    }
+
+    .play-button-overlay i {
+        font-size: 40px; /* Smaller play button on mobile */
+    }
 }
 
 /* Customer Reviews Section */
@@ -598,6 +730,19 @@ body {
 .footer-column ul {
     font-size: 14px;
     line-height: 1.5;
+}
+
+/* Footer Section - Phone and WhatsApp Number Text Color */
+.footer-column p a[href^="tel"],
+.footer-column p a[href^="https://wa.me"] {
+    color: #fff; /* White text color for phone and WhatsApp numbers */
+    text-decoration: none; /* Optional: Remove underline, if desired */
+    transition: color 0.3s ease; /* Optional: Smooth color transition on hover */
+}
+
+.footer-column p a[href^="tel"]:hover,
+.footer-column p a[href^="https://wa.me"]:hover {
+    color: #00C4B4; /* Optional: Change to a different color on hover, matching your theme */
 }
 
 .footer-column ul {

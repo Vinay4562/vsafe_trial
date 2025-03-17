@@ -8,6 +8,7 @@
     <meta name="author" content="V_Safe">
     <title>V_Safe</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <script src="https://www.youtube.com/iframe_api"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -110,6 +111,44 @@
             </a>
         </div>
     </section>
+
+    <!-- YouTube Videos Section -->
+<!-- YouTube Videos Section -->
+<section class="youtube-videos animate-on-scroll">
+    <h2 class="section-title">Our Videos</h2>
+    <div class="videos-container">
+        <div class="videos-grid">
+            <!-- Video 1 -->
+            <div class="video-item">
+                <div class="video-wrapper">
+                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/ga2RGRnZMzg?enablejsapi=1" title="Video 1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <div class="play-button-overlay" aria-label="Play video">
+                        <i class="fas fa-play"></i>
+                    </div>
+                </div>
+            </div>
+            <!-- Video 2 -->
+            <div class="video-item">
+                <div class="video-wrapper">
+                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/D_xy5-Wv6n0?enablejsapi=1" title="Video 2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <div class="play-button-overlay" aria-label="Play video">
+                        <i class="fas fa-play"></i>
+                    </div>
+                </div>
+            </div>
+            <!-- Video 3 -->
+            <div class="video-item">
+                <div class="video-wrapper">
+                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/vpIBZbh3pHE?enablejsapi=1" title="Video 3" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <div class="play-button-overlay" aria-label="Play video">
+                        <i class="fas fa-play"></i>
+                    </div>
+                </div>
+            </div>
+            <!-- Add more video items as needed -->
+        </div>
+    </div>
+</section>
 
     <!-- Customer Reviews Section -->
     <section class="customer-reviews animate-on-scroll">
@@ -327,6 +366,45 @@
 
             checkVisibility();
             checkProductSectionVisibility();
+        });
+
+        // YouTube IFrame API setup
+        let players = [];
+
+        function onYouTubeIframeAPIReady() {
+            const iframes = document.querySelectorAll('.video-item iframe');
+            iframes.forEach((iframe, index) => {
+                players[index] = new YT.Player(iframe, {
+                    events: {
+                        'onReady': onPlayerReady,
+                        'onStateChange': onPlayerStateChange
+                    }
+                });
+            });
+        }
+
+        function onPlayerReady(event) {
+            const videoItem = event.target.getIframe().closest('.video-item');
+            const playButton = videoItem.querySelector('.play-button-overlay');
+            playButton.addEventListener('click', () => {
+                event.target.playVideo(); // Start video playback
+                videoItem.classList.add('playing'); // Hide play button overlay
+            });
+        }
+
+        function onPlayerStateChange(event) {
+            const videoItem = event.target.getIframe().closest('.video-item');
+            if (event.data === YT.PlayerState.ENDED) {
+                videoItem.classList.remove('playing'); // Show play button overlay again when video ends
+            }
+        }
+
+        // Ensure play button overlay reappears if video is paused
+        document.querySelectorAll('.video-item iframe').forEach(iframe => {
+            iframe.addEventListener('pause', (event) => {
+                const videoItem = event.target.closest('.video-item');
+                videoItem.classList.remove('playing');
+            });
         });
     </script>
 </body>
