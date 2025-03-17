@@ -340,6 +340,19 @@ body {
     line-height: 1.5;
 }
 
+/* Footer Section - Phone and WhatsApp Number Text Color */
+.footer-column p a[href^="tel"],
+.footer-column p a[href^="https://wa.me"] {
+    color: #fff; /* White text color for phone and WhatsApp numbers */
+    text-decoration: none; /* Optional: Remove underline, if desired */
+    transition: color 0.3s ease; /* Optional: Smooth color transition on hover */
+}
+
+.footer-column p a[href^="tel"]:hover,
+.footer-column p a[href^="https://wa.me"]:hover {
+    color: #00C4B4; /* Optional: Change to a different color on hover, matching your theme */
+}
+
 .footer-column ul {
     list-style: none;
     padding: 0;
